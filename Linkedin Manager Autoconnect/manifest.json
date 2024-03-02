@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Manager Autoconnect Component",
+	"description": "A component which can send the connect request automatically",
+    "version": "0.1",
+    "icons": {
+        "48": "Logo.png"
+    },
+    "action": {
+       
+        "default_title": "LinkedIn Manager Autoconnect Component",
+        "default_popup": "./popup/popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "scripting",
+        "activeTab"
+    ]
+}

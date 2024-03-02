@@ -1,0 +1,25 @@
+{
+	"manifest_version": 3,
+
+	"name": "Linkedin Manager JSON Scrapper",
+	"description": "A component which can scrape the profile data and can export to JSON format",
+	"version": "1.0",
+	"author": "Harendra Akarsh and Gurumadhwa",
+	"icons": {
+        "48": "Logo.png"
+    },
+	"background": {
+		"service_worker": "popup.js"
+		
+	},
+
+	"permissions": [
+        
+		"activeTab","scripting"
+    ],
+	"action":{
+		"default_icon":"logo.png",
+		"default_title":"click me"
+	}
+	
+}
