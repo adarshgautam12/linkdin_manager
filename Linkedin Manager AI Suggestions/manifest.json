@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedinIn Manager AI connection automation",
+  "description": "Chrome extension for automating ai generated msgs and personalised ai dms",
+  "version": "1.0",
+  "icons": {
+    "48": "Logo.png"
+  },
+  "action": {
+    "default_popup": "./popup/popup.html",
+    "default_icon": {
+      "16": "Logo.png",
+      "32": "Logo.png",
+      "48": "Logo.png",
+      "128": "Logo.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.linkedin.com/in*"
+      ],
+      "js": [
+        "./content-scripts/linkedIn.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://*.chat.openai.com/*"
+      ],
+      "js": [
+        "./content-scripts/chatGPT.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "scripting",
+    "storage",
+    "unlimitedStorage",
+    "webNavigation"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://*.linkedin.com/in*"
+    ]
+  }
+}
